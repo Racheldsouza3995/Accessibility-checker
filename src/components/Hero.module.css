@@ -1,0 +1,84 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  max-width: 700px;
+}
+
+.intro {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--green);
+  margin-bottom: 1.2rem;
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.name {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 700;
+  color: var(--slate-lighter);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.role {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--slate);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+
+.desc {
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--slate);
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.5s 0.4s ease both;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.5s 0.5s ease both;
+}
+
+.btn, .btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.btn {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+.btn:hover {
+  background: var(--green-tint);
+  color: var(--green);
+}
+
+.btnGhost {
+  background: transparent;
+  color: var(--slate-lighter);
+  border: 1px solid var(--slate);
+}
+.btnGhost:hover {
+  border-color: var(--green);
+  color: var(--green);
+}

@@ -1,0 +1,156 @@
+.section {
+  padding: 6rem 0;
+  max-width: 700px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--slate-lighter);
+  margin-bottom: 2.5rem;
+  white-space: nowrap;
+}
+
+.heading::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 1px;
+  background: var(--navy-lighter);
+  margin-left: 0.5rem;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--green);
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.text p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--slate);
+  margin-bottom: 1rem;
+}
+
+.text p strong {
+  color: var(--slate-lighter);
+  font-weight: 600;
+}
+
+.specialties {
+  margin-top: 1.5rem;
+}
+
+.specialtiesLabel {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--green);
+  margin-bottom: 0.75rem !important;
+  letter-spacing: 0.05em;
+}
+
+.specialtiesList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1rem;
+}
+
+.specialtiesList li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--slate);
+  font-family: var(--font-mono);
+}
+
+.arrow {
+  color: var(--green);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.imageInner {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  cursor: pointer;
+}
+
+/* Green tint overlay on the photo */
+.imageInner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  mix-blend-mode: multiply;
+  border-radius: 4px;
+  opacity: 0.25;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.imageInner:hover::before {
+  opacity: 0;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 4px;
+  filter: grayscale(30%) contrast(1.05);
+  transition: filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.imageInner:hover .photo {
+  filter: none;
+}
+
+/* Offset green border*/
+.imageBorder {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--green);
+  border-radius: 4px;
+  z-index: 0;
+  transition: top 0.25s ease, left 0.25s ease;
+}
+
+.imageInner:hover .imageBorder {
+  top: 8px;
+  left: 8px;
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .imageWrapper { order: -1; }
+  .imageInner { max-width: 160px; margin: 0 auto; }
+  .specialtiesList { grid-template-columns: 1fr; }
+}

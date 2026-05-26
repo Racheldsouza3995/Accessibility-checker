@@ -1,0 +1,36 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.layout.loaded { opacity: 1; }
+
+.main {
+  margin-left: 340px;
+  padding: 0 6rem 0 6rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.footer {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--slate);
+}
+
+.footer span { color: var(--green); }
+
+@media (max-width: 1080px) {
+  .main { padding: 0 3rem; }
+}
+
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .main { margin-left: 0; padding: 0 1.5rem; }
+}
