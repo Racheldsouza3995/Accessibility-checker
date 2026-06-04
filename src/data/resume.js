@@ -129,9 +129,9 @@ export const projects = [
 },
 {
   title: 'Weather Forecast Dashboard',
-  description: 'Real-time weather dashboard with city search and geolocation. Shows current conditions, 24-hour temperature trend chart, and 5-day forecast using OpenWeatherMap API.',
+  description: 'Real-time weather dashboard with city search and geolocation. Shows current conditions, 24-hour temperature trend chart, and 5-day forecast powered by OpenWeatherMap API.',
   tech: ['React', 'Recharts', 'OpenWeatherMap API', 'Vite'],
-  github: '',
+  github: 'https://github.com/Racheldsouza3995/Weather-dashboard',
   live: '/#weather-dashboard',
 },
 ]
