@@ -8,7 +8,7 @@ export const profile = {
   phone: '848-391-8742',
   linkedin: 'https://www.linkedin.com/in/dsouzarachel64',   
   github: 'https://github.com/Racheldsouza3995',       
-  portfolio: 'https://portfolio.com', // ← replace with your real URL
+  portfolio: 'https://rachel-dsouza.vercel.app', // 
 }
 
 export const about = {
@@ -118,12 +118,20 @@ export const experience = [
   },
 ]
 
+
 export const projects = [
   {
-    title: 'Accessibility Checker',
-    description: 'A WCAG 2.0/2.1 AA compliance tool that analyses any URL or HTML snippet for accessibility violations using axe-core. Shows issues grouped by severity with detailed fix suggestions.',
-    tech: ['React', 'axe-core', 'Vite', 'CSS Modules'],
-    github: '',
-    live: '/#accessibility-checker',
-  },
+  title: 'Accessibility Checker',
+  description: 'A WCAG 2.0/2.1 AA compliance tool that analyses any URL or HTML snippet for accessibility violations using axe-core. Shows issues grouped by severity with detailed fix suggestions.',
+  tech: ['React', 'axe-core', 'Vite', 'CSS Modules'],
+  github: 'https://github.com/Racheldsouza3995/Accessibility-checker',
+  live: 'https://rachel-dsouza.vercel.app/#accessibility-checker',
+},
+{
+  title: 'Weather Forecast Dashboard',
+  description: 'Real-time weather dashboard with city search and geolocation. Shows current conditions, 24-hour temperature trend chart, and 5-day forecast using OpenWeatherMap API.',
+  tech: ['React', 'Recharts', 'OpenWeatherMap API', 'Vite'],
+  github: '',
+  live: '/#weather-dashboard',
+},
 ]
